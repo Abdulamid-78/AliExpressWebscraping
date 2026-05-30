@@ -200,3 +200,4 @@ def main() -> pd.DataFrame | None:
 
 if __name__ == "__main__":
     main()
+    logging.info("==========END OF EXTRACTION==========")
