@@ -1,0 +1,921 @@
+2026-05-25 23:06:35,357 - INFO - 
+==================================================
+2026-05-25 23:06:35,357 - INFO - 🔷 FULL PIPELINE START
+2026-05-25 23:06:35,358 - INFO - ===============================
+
+2026-05-25 23:06:35,358 - INFO - 🚀 wipe → extract → transform → load
+
+2026-05-25 23:06:35,358 - INFO - 
+==================================================
+2026-05-25 23:06:35,358 - INFO - 🔷 WIPING OLD DATA
+2026-05-25 23:06:35,359 - INFO - ===============================
+
+2026-05-25 23:06:35,359 - INFO - 
+==================================================
+2026-05-25 23:06:35,359 - INFO - 🔷 Wiping — mode: all
+2026-05-25 23:06:35,359 - INFO - ===============================
+
+2026-05-25 23:06:35,360 - INFO - ⚠️ File not found (skipped): data\aliexpress_laptops.csv
+2026-05-25 23:06:35,360 - INFO - ⚠️ File not found (skipped): data\transformed_laptops.csv
+2026-05-25 23:06:35,361 - INFO - [92m🎉 Wipe completed for mode: all[0m
+2026-05-25 23:06:35,361 - INFO - ⏱️ Step completed in 0s
+
+2026-05-25 23:06:35,361 - INFO - 
+==================================================
+2026-05-25 23:06:35,361 - INFO - 🔷 HEALTH CHECK
+2026-05-25 23:06:35,362 - INFO - ===============================
+
+2026-05-25 23:06:35,362 - INFO - 
+==================================================
+2026-05-25 23:06:35,362 - INFO - 🔷 HTTP Response Check
+2026-05-25 23:06:35,362 - INFO - ===============================
+
+2026-05-25 23:06:37,608 - INFO - Successfully accessed https://www.aliexpress.com/w/wholesale-laptop.html?spm=a2g0o.productlist.search.0 | status=200
+2026-05-25 23:06:37,610 - INFO - ⏱️ Step completed in 2s
+
+2026-05-25 23:06:37,610 - INFO - 
+==================================================
+2026-05-25 23:06:37,610 - INFO - 🔷 EXTRACT
+2026-05-25 23:06:37,610 - INFO - ===============================
+
+2026-05-25 23:06:37,611 - INFO - 
+==================================================
+2026-05-25 23:06:37,611 - INFO - 🔷 Output Directory Check
+2026-05-25 23:06:37,611 - INFO - ===============================
+
+2026-05-25 23:06:37,611 - INFO - Output directory ready: data
+2026-05-25 23:06:37,612 - INFO - 
+==================================================
+2026-05-25 23:06:37,612 - INFO - 🔷 Starting Extraction Process
+2026-05-25 23:06:37,612 - INFO - ===============================
+
+2026-05-25 23:06:37,612 - INFO - 
+==================================================
+2026-05-25 23:06:37,612 - INFO - 🔷 Selenium Browser Check
+2026-05-25 23:06:37,613 - INFO - ===============================
+
+2026-05-25 23:07:09,721 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-25 23:07:21,686 - INFO - Page title: Laptop-AliExpress
+2026-05-25 23:07:29,714 - INFO - ℹ️ No cookie button found or already accepted: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff619847de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff619847e50+14900]
+	chromedriver!(No symbol) [0x7ff6195ad5ad]
+	chromedriver!(No symbol) [0x7ff619607822]
+	chromedriver!(No symbol) [0x7ff619607b2c]
+	chromedriver!(No symbol) [0x7ff619657d17]
+	chromedriver!(No symbol) [0x7ff61965486f]
+	chromedriver!(No symbol) [0x7ff6195f9df8]
+	chromedriver!(No symbol) [0x7ff6195face3]
+	chromedriver!GetHandleVerifier [0x7ff619b5cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff619b57375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff619b7bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff619866045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff61986ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff619851bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff619851d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6198360e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffd35ebe957+17]
+	ntdll!RtlUserThreadStart [0x7ffd3738427c+2c]
+
+2026-05-25 23:07:32,745 - INFO - Detected 16 product-like elements
+2026-05-25 23:07:32,746 - INFO - Selenium page load looks successful
+2026-05-25 23:07:32,746 - INFO - ⏱️ Step completed in 55s
+
+2026-05-25 23:07:32,757 - INFO - 
+==================================================
+2026-05-25 23:07:32,758 - INFO - 🔷 Extracting Product Data
+2026-05-25 23:07:32,758 - INFO - ===============================
+
+2026-05-25 23:07:32,758 - INFO - Processing page 1/60
+2026-05-25 23:07:32,911 - WARNING - ⚠️ No products found — blocked or selectors outdated
+2026-05-25 23:07:35,070 - INFO - ✅ All lists validated — 0 records each
+2026-05-25 23:07:35,075 - INFO - ✅ Extraction complete — 0 products extracted
+2026-05-25 23:07:35,093 - INFO - ✅ Raw data saved to data\aliexpress_laptops.csv
+2026-05-25 23:07:35,093 - INFO - ⏱️ Step completed in 57s
+
+2026-05-25 23:07:35,093 - INFO - 
+==================================================
+2026-05-25 23:07:35,093 - INFO - 🔷 TRANSFORM
+2026-05-25 23:07:35,094 - INFO - ===============================
+
+2026-05-25 23:07:35,094 - INFO - 
+==================================================
+2026-05-25 23:07:35,094 - INFO - 🔷 Starting Transformation Process
+2026-05-25 23:07:35,094 - INFO - ===============================
+
+2026-05-25 23:07:35,095 - INFO - 
+==================================================
+2026-05-25 23:07:35,095 - INFO - 🔷 Transforming Data
+2026-05-25 23:07:35,095 - INFO - ===============================
+
+2026-05-25 23:07:35,095 - ERROR - ❌ No data to transform
+2026-05-25 23:07:35,096 - ERROR - ❌ Transform failed
+2026-05-25 23:07:35,096 - INFO - ⏱️ Step completed in 0s
+
+2026-05-25 23:07:35,096 - ERROR - ❌ Transform failed — aborting pipeline
+2026-05-25 23:07:35,096 - INFO - ⏱️ Step completed in 59s
+
+2026-05-26 00:29:38,685 - INFO - 
+==================================================
+2026-05-26 00:29:38,685 - INFO - 🔷 FULL PIPELINE START
+2026-05-26 00:29:38,686 - INFO - ===============================
+
+2026-05-26 00:29:38,686 - INFO - 🚀 wipe → extract → transform → load
+
+2026-05-26 00:29:38,687 - INFO - 
+==================================================
+2026-05-26 00:29:38,687 - INFO - 🔷 WIPING OLD DATA
+2026-05-26 00:29:38,687 - INFO - ===============================
+
+2026-05-26 00:29:38,688 - INFO - 
+==================================================
+2026-05-26 00:29:38,688 - INFO - 🔷 Wiping — mode: all
+2026-05-26 00:29:38,688 - INFO - ===============================
+
+2026-05-26 00:29:38,690 - INFO - 🗑️ Deleted file: data\aliexpress_laptops.csv
+2026-05-26 00:29:38,691 - INFO - ⚠️ File not found (skipped): data\transformed_laptops.csv
+2026-05-26 00:29:38,691 - INFO - [92m🎉 Wipe completed for mode: all[0m
+2026-05-26 00:29:38,692 - INFO - ⏱️ Step completed in 0s
+
+2026-05-26 00:29:38,692 - INFO - 
+==================================================
+2026-05-26 00:29:38,693 - INFO - 🔷 HEALTH CHECK
+2026-05-26 00:29:38,693 - INFO - ===============================
+
+2026-05-26 00:29:38,693 - INFO - 
+==================================================
+2026-05-26 00:29:38,694 - INFO - 🔷 HTTP Response Check
+2026-05-26 00:29:38,694 - INFO - ===============================
+
+2026-05-26 00:29:42,954 - INFO - Successfully accessed https://www.aliexpress.com/w/wholesale-laptop.html?spm=a2g0o.productlist.search.0 | status=200
+2026-05-26 00:29:42,971 - INFO - ⏱️ Step completed in 4s
+
+2026-05-26 00:29:42,972 - INFO - 
+==================================================
+2026-05-26 00:29:42,973 - INFO - 🔷 EXTRACT
+2026-05-26 00:29:42,974 - INFO - ===============================
+
+2026-05-26 00:29:42,975 - INFO - 
+==================================================
+2026-05-26 00:29:42,976 - INFO - 🔷 Output Directory Check
+2026-05-26 00:29:42,977 - INFO - ===============================
+
+2026-05-26 00:29:42,980 - INFO - Output directory ready: data
+2026-05-26 00:29:42,981 - INFO - 
+==================================================
+2026-05-26 00:29:42,982 - INFO - 🔷 Starting Extraction Process
+2026-05-26 00:29:42,983 - INFO - ===============================
+
+2026-05-26 00:29:42,984 - INFO - 
+==================================================
+2026-05-26 00:29:42,985 - INFO - 🔷 Selenium Browser Check
+2026-05-26 00:29:42,986 - INFO - ===============================
+
+2026-05-26 00:31:07,719 - WARNING - There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2026-05-26 00:31:09,217 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-26 00:31:13,271 - ERROR - Selenium test failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff68fa77de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff68fa77e50+14900]
+	chromedriver!(No symbol) [0x7ff68f7dd5ad]
+	chromedriver!(No symbol) [0x7ff68f7b40f2]
+	chromedriver!(No symbol) [0x7ff68f866f56]
+	chromedriver!(No symbol) [0x7ff68f884172]
+	chromedriver!(No symbol) [0x7ff68f829df8]
+	chromedriver!(No symbol) [0x7ff68f82ace3]
+	chromedriver!GetHandleVerifier [0x7ff68fd8cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff68fd87375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff68fdabc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff68fa96045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff68fa9ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff68fa81bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff68fa81d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff68fa660e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffa2768e957+17]
+	ntdll!RtlUserThreadStart [0x7ffa297a427c+2c]
+Traceback (most recent call last):
+  File "C:\Users\ADEKUNLE ABDULAMID\Desktop\AliExpressWebscraping\etl\scraper.py", line 85, in test_selenium
+    driver.execute_script(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADEKUNLE ABDULAMID\Desktop\AliExpressWebscraping\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 578, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADEKUNLE ABDULAMID\Desktop\AliExpressWebscraping\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 468, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ADEKUNLE ABDULAMID\Desktop\AliExpressWebscraping\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=148.0.7778.179)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff68fa77de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff68fa77e50+14900]
+	chromedriver!(No symbol) [0x7ff68f7dd5ad]
+	chromedriver!(No symbol) [0x7ff68f7b40f2]
+	chromedriver!(No symbol) [0x7ff68f866f56]
+	chromedriver!(No symbol) [0x7ff68f884172]
+	chromedriver!(No symbol) [0x7ff68f829df8]
+	chromedriver!(No symbol) [0x7ff68f82ace3]
+	chromedriver!GetHandleVerifier [0x7ff68fd8cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff68fd87375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff68fdabc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff68fa96045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff68fa9ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff68fa81bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff68fa81d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff68fa660e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffa2768e957+17]
+	ntdll!RtlUserThreadStart [0x7ffa297a427c+2c]
+
+2026-05-26 00:31:15,651 - INFO - ⏱️ Step completed in 1m 32s
+
+2026-05-26 00:31:15,652 - ERROR - ❌ No driver received — stopping extraction
+2026-05-26 00:31:15,653 - ERROR - ❌ Extraction failed — nothing saved
+2026-05-26 00:31:15,654 - INFO - ⏱️ Step completed in 1m 32s
+
+2026-05-26 00:31:15,655 - ERROR - ❌ Extraction failed — aborting pipeline
+2026-05-26 00:31:15,656 - INFO - ⏱️ Step completed in 1m 36s
+
+2026-05-26 00:40:54,362 - INFO - 
+==================================================
+2026-05-26 00:40:54,363 - INFO - 🔷 FULL PIPELINE START
+2026-05-26 00:40:54,363 - INFO - ===============================
+
+2026-05-26 00:40:54,364 - INFO - 🚀 wipe → extract → transform → load
+
+2026-05-26 00:40:54,364 - INFO - 
+==================================================
+2026-05-26 00:40:54,364 - INFO - 🔷 WIPING OLD DATA
+2026-05-26 00:40:54,365 - INFO - ===============================
+
+2026-05-26 00:40:54,365 - INFO - 
+==================================================
+2026-05-26 00:40:54,365 - INFO - 🔷 Wiping — mode: all
+2026-05-26 00:40:54,366 - INFO - ===============================
+
+2026-05-26 00:40:54,366 - INFO - ⚠️ File not found (skipped): data\aliexpress_laptops.csv
+2026-05-26 00:40:54,367 - INFO - ⚠️ File not found (skipped): data\transformed_laptops.csv
+2026-05-26 00:40:54,367 - INFO - [92m🎉 Wipe completed for mode: all[0m
+2026-05-26 00:40:54,367 - INFO - ⏱️ Step completed in 0s
+
+2026-05-26 00:40:54,368 - INFO - 
+==================================================
+2026-05-26 00:40:54,368 - INFO - 🔷 HEALTH CHECK
+2026-05-26 00:40:54,368 - INFO - ===============================
+
+2026-05-26 00:40:54,369 - INFO - 
+==================================================
+2026-05-26 00:40:54,369 - INFO - 🔷 HTTP Response Check
+2026-05-26 00:40:54,370 - INFO - ===============================
+
+2026-05-26 00:40:58,444 - INFO - Successfully accessed https://www.aliexpress.com/w/wholesale-laptop.html?spm=a2g0o.productlist.search.0 | status=200
+2026-05-26 00:40:58,449 - INFO - ⏱️ Step completed in 4s
+
+2026-05-26 00:40:58,450 - INFO - 
+==================================================
+2026-05-26 00:40:58,450 - INFO - 🔷 EXTRACT
+2026-05-26 00:40:58,451 - INFO - ===============================
+
+2026-05-26 00:40:58,452 - INFO - 
+==================================================
+2026-05-26 00:40:58,454 - INFO - 🔷 Output Directory Check
+2026-05-26 00:40:58,455 - INFO - ===============================
+
+2026-05-26 00:40:58,457 - INFO - Output directory ready: data
+2026-05-26 00:40:58,458 - INFO - 
+==================================================
+2026-05-26 00:40:58,459 - INFO - 🔷 Starting Extraction Process
+2026-05-26 00:40:58,461 - INFO - ===============================
+
+2026-05-26 00:40:58,462 - INFO - 
+==================================================
+2026-05-26 00:40:58,463 - INFO - 🔷 Selenium Browser Check
+2026-05-26 00:40:58,464 - INFO - ===============================
+
+2026-05-26 00:42:23,089 - WARNING - There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2026-05-26 00:42:24,272 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-26 00:43:01,392 - INFO - Page title: Laptop-AliExpress
+2026-05-26 00:43:09,524 - INFO - ℹ️ No cookie button found or already accepted: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff68fa77de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff68fa77e50+14900]
+	chromedriver!(No symbol) [0x7ff68f7dd5ad]
+	chromedriver!(No symbol) [0x7ff68f837822]
+	chromedriver!(No symbol) [0x7ff68f837b2c]
+	chromedriver!(No symbol) [0x7ff68f887d17]
+	chromedriver!(No symbol) [0x7ff68f88486f]
+	chromedriver!(No symbol) [0x7ff68f829df8]
+	chromedriver!(No symbol) [0x7ff68f82ace3]
+	chromedriver!GetHandleVerifier [0x7ff68fd8cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff68fd87375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff68fdabc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff68fa96045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff68fa9ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff68fa81bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff68fa81d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff68fa660e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffa2768e957+17]
+	ntdll!RtlUserThreadStart [0x7ffa297a427c+2c]
+
+2026-05-26 00:43:12,612 - INFO - Detected 42 product-like elements
+2026-05-26 00:43:12,613 - INFO - Selenium page load looks successful
+2026-05-26 00:43:12,614 - INFO - ⏱️ Step completed in 2m 14s
+
+2026-05-26 00:43:12,663 - INFO - 
+==================================================
+2026-05-26 00:43:12,664 - INFO - 🔷 Extracting Product Data
+2026-05-26 00:43:12,665 - INFO - ===============================
+
+2026-05-26 00:43:12,666 - INFO - Processing page 1/60
+2026-05-26 00:43:13,094 - WARNING - ⚠️ No products found — blocked or selectors outdated
+2026-05-26 00:43:15,440 - INFO - ✅ All lists validated — 0 records each
+2026-05-26 00:43:15,450 - INFO - ✅ Extraction complete — 0 products extracted
+2026-05-26 00:43:15,472 - INFO - ✅ Raw data saved to data\aliexpress_laptops.csv
+2026-05-26 00:43:15,473 - INFO - ⏱️ Step completed in 2m 17s
+
+2026-05-26 00:43:15,474 - INFO - 
+==================================================
+2026-05-26 00:43:15,476 - INFO - 🔷 TRANSFORM
+2026-05-26 00:43:15,477 - INFO - ===============================
+
+2026-05-26 00:43:15,479 - INFO - 
+==================================================
+2026-05-26 00:43:15,480 - INFO - 🔷 Starting Transformation Process
+2026-05-26 00:43:15,482 - INFO - ===============================
+
+2026-05-26 00:43:15,483 - INFO - 
+==================================================
+2026-05-26 00:43:15,484 - INFO - 🔷 Transforming Data
+2026-05-26 00:43:15,485 - INFO - ===============================
+
+2026-05-26 00:43:15,486 - ERROR - ❌ No data to transform
+2026-05-26 00:43:15,487 - ERROR - ❌ Transform failed
+2026-05-26 00:43:15,488 - INFO - ⏱️ Step completed in 0s
+
+2026-05-26 00:43:15,489 - ERROR - ❌ Transform failed — aborting pipeline
+2026-05-26 00:43:15,490 - INFO - ⏱️ Step completed in 2m 21s
+
+2026-05-30 10:18:31,413 - INFO - 
+==================================================
+2026-05-30 10:18:31,414 - INFO - 🔷 Output Directory Check
+2026-05-30 10:18:31,415 - INFO - ===============================
+
+2026-05-30 10:18:31,416 - INFO - Output directory ready: data
+2026-05-30 10:18:31,417 - INFO - 
+==================================================
+2026-05-30 10:18:31,417 - INFO - 🔷 Starting Extraction Process
+2026-05-30 10:18:31,418 - INFO - ===============================
+
+2026-05-30 10:18:31,418 - INFO - 
+==================================================
+2026-05-30 10:18:31,418 - INFO - 🔷 Selenium Browser Check
+2026-05-30 10:18:31,419 - INFO - ===============================
+
+2026-05-30 10:18:40,450 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-30 10:19:10,725 - INFO - Page title: Laptop-AliExpress
+2026-05-30 10:19:18,760 - INFO - ℹ️ No cookie button found or already accepted: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6aef27de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6aef27e50+14900]
+	chromedriver!(No symbol) [0x7ff6aec8d5ad]
+	chromedriver!(No symbol) [0x7ff6aece7822]
+	chromedriver!(No symbol) [0x7ff6aece7b2c]
+	chromedriver!(No symbol) [0x7ff6aed37d17]
+	chromedriver!(No symbol) [0x7ff6aed3486f]
+	chromedriver!(No symbol) [0x7ff6aecd9df8]
+	chromedriver!(No symbol) [0x7ff6aecdace3]
+	chromedriver!GetHandleVerifier [0x7ff6af23cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6af237375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6af25bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6aef46045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6aef4ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6aef31bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6aef31d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6aef160e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ff9001ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff900b67c1c+2c]
+
+2026-05-30 10:19:21,843 - INFO - Detected 17 product-like elements
+2026-05-30 10:19:21,844 - INFO - Selenium page load looks successful
+2026-05-30 10:19:21,844 - INFO - ⏱️ Step completed in 50s
+
+2026-05-30 10:19:21,866 - INFO - 
+==================================================
+2026-05-30 10:19:21,866 - INFO - 🔷 Extracting Product Data
+2026-05-30 10:19:21,867 - INFO - ===============================
+
+2026-05-30 10:19:21,867 - INFO - Processing page 1/60
+2026-05-30 10:19:22,220 - WARNING - ⚠️ No products found — blocked or selectors outdated
+2026-05-30 10:19:25,019 - INFO - ✅ All lists validated — 0 records each
+2026-05-30 10:19:25,031 - INFO - ✅ Extraction complete — 0 products extracted
+2026-05-30 10:19:25,047 - INFO - ✅ Raw data saved to data\aliexpress_laptops.csv
+2026-05-30 10:19:25,048 - INFO - ⏱️ Step completed in 53s
+
+2026-05-30 12:13:00,115 - INFO - 
+==================================================
+2026-05-30 12:13:00,115 - INFO - 🔷 Output Directory Check
+2026-05-30 12:13:00,115 - INFO - ===============================
+
+2026-05-30 12:13:00,116 - INFO - Output directory ready: data
+2026-05-30 12:13:00,116 - INFO - 
+==================================================
+2026-05-30 12:13:00,116 - INFO - 🔷 Starting Extraction Process
+2026-05-30 12:13:00,117 - INFO - ===============================
+
+2026-05-30 12:13:00,117 - INFO - 
+==================================================
+2026-05-30 12:13:00,117 - INFO - 🔷 Selenium Browser Check
+2026-05-30 12:13:00,117 - INFO - ===============================
+
+2026-05-30 12:13:02,543 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-30 12:13:16,358 - INFO - Page title: Laptop-AliExpress
+2026-05-30 12:13:24,419 - INFO - ℹ️ No cookie button found or already accepted: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6aef27de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6aef27e50+14900]
+	chromedriver!(No symbol) [0x7ff6aec8d5ad]
+	chromedriver!(No symbol) [0x7ff6aece7822]
+	chromedriver!(No symbol) [0x7ff6aece7b2c]
+	chromedriver!(No symbol) [0x7ff6aed37d17]
+	chromedriver!(No symbol) [0x7ff6aed3486f]
+	chromedriver!(No symbol) [0x7ff6aecd9df8]
+	chromedriver!(No symbol) [0x7ff6aecdace3]
+	chromedriver!GetHandleVerifier [0x7ff6af23cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6af237375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6af25bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6aef46045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6aef4ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6aef31bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6aef31d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6aef160e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ff9001ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff900b67c1c+2c]
+
+2026-05-30 12:13:27,479 - INFO - Detected 17 product-like elements
+2026-05-30 12:13:27,479 - INFO - Selenium page load looks successful
+2026-05-30 12:13:27,479 - INFO - ⏱️ Step completed in 27s
+
+2026-05-30 12:13:27,493 - INFO - 
+==================================================
+2026-05-30 12:13:27,494 - INFO - 🔷 Extracting Product Data
+2026-05-30 12:13:27,494 - INFO - ===============================
+
+2026-05-30 12:13:27,494 - INFO - Processing page 1/60
+2026-05-30 12:13:27,656 - INFO - Found 12 products on page 1
+2026-05-30 12:13:35,940 - INFO - Processing page 2/60
+2026-05-30 12:13:36,109 - INFO - Found 12 products on page 2
+2026-05-30 12:13:40,416 - INFO - Processing page 3/60
+2026-05-30 12:13:40,610 - INFO - Found 12 products on page 3
+2026-05-30 12:13:45,355 - INFO - Processing page 4/60
+2026-05-30 12:13:45,553 - INFO - Found 12 products on page 4
+2026-05-30 12:13:51,247 - INFO - Processing page 5/60
+2026-05-30 12:13:51,409 - INFO - Found 12 products on page 5
+2026-05-30 12:13:55,924 - INFO - Processing page 6/60
+2026-05-30 12:13:56,161 - INFO - Found 12 products on page 6
+2026-05-30 12:14:00,542 - INFO - Processing page 7/60
+2026-05-30 12:14:00,724 - INFO - Found 12 products on page 7
+2026-05-30 12:14:05,936 - INFO - Processing page 8/60
+2026-05-30 12:14:06,151 - INFO - Found 12 products on page 8
+2026-05-30 12:14:10,275 - INFO - Processing page 9/60
+2026-05-30 12:14:10,457 - INFO - Found 12 products on page 9
+2026-05-30 12:14:15,860 - INFO - Processing page 10/60
+2026-05-30 12:14:16,021 - INFO - Found 12 products on page 10
+2026-05-30 12:14:20,774 - INFO - Processing page 11/60
+2026-05-30 12:14:21,033 - INFO - Found 12 products on page 11
+2026-05-30 12:14:27,115 - INFO - Processing page 12/60
+2026-05-30 12:14:27,304 - INFO - Found 12 products on page 12
+2026-05-30 12:14:32,717 - INFO - Processing page 13/60
+2026-05-30 12:14:32,902 - INFO - Found 12 products on page 13
+2026-05-30 12:14:36,831 - INFO - Processing page 14/60
+2026-05-30 12:14:37,015 - INFO - Found 12 products on page 14
+2026-05-30 12:14:41,851 - INFO - Processing page 15/60
+2026-05-30 12:14:42,020 - INFO - Found 12 products on page 15
+2026-05-30 12:14:46,070 - INFO - Processing page 16/60
+2026-05-30 12:14:46,278 - INFO - Found 12 products on page 16
+2026-05-30 12:14:51,077 - INFO - Processing page 17/60
+2026-05-30 12:14:51,253 - INFO - Found 12 products on page 17
+2026-05-30 12:14:56,805 - INFO - Processing page 18/60
+2026-05-30 12:14:56,968 - INFO - Found 12 products on page 18
+2026-05-30 12:15:00,739 - INFO - Processing page 19/60
+2026-05-30 12:15:00,944 - INFO - Found 12 products on page 19
+2026-05-30 12:15:04,828 - INFO - Processing page 20/60
+2026-05-30 12:15:05,003 - INFO - Found 12 products on page 20
+2026-05-30 12:15:08,661 - INFO - Processing page 21/60
+2026-05-30 12:15:08,829 - INFO - Found 12 products on page 21
+2026-05-30 12:15:13,042 - INFO - Processing page 22/60
+2026-05-30 12:15:13,257 - INFO - Found 12 products on page 22
+2026-05-30 12:15:18,471 - INFO - Processing page 23/60
+2026-05-30 12:15:18,666 - INFO - Found 12 products on page 23
+2026-05-30 12:15:24,399 - INFO - Processing page 24/60
+2026-05-30 12:15:24,563 - INFO - Found 12 products on page 24
+2026-05-30 12:15:28,698 - INFO - Processing page 25/60
+2026-05-30 12:15:28,862 - INFO - Found 12 products on page 25
+2026-05-30 12:15:32,592 - INFO - Processing page 26/60
+2026-05-30 12:15:32,755 - INFO - Found 12 products on page 26
+2026-05-30 12:15:36,671 - INFO - Processing page 27/60
+2026-05-30 12:15:36,827 - INFO - Found 12 products on page 27
+2026-05-30 12:15:41,795 - INFO - Processing page 28/60
+2026-05-30 12:15:41,951 - INFO - Found 12 products on page 28
+2026-05-30 12:15:46,839 - INFO - Processing page 29/60
+2026-05-30 12:15:46,999 - INFO - Found 12 products on page 29
+2026-05-30 12:15:50,863 - INFO - Processing page 30/60
+2026-05-30 12:15:51,024 - INFO - Found 12 products on page 30
+2026-05-30 12:15:54,491 - INFO - Processing page 31/60
+2026-05-30 12:15:54,649 - INFO - Found 12 products on page 31
+2026-05-30 12:15:58,690 - INFO - Processing page 32/60
+2026-05-30 12:15:58,961 - INFO - Found 12 products on page 32
+2026-05-30 12:16:04,357 - INFO - Processing page 33/60
+2026-05-30 12:16:04,512 - INFO - Found 12 products on page 33
+2026-05-30 12:16:07,988 - INFO - Processing page 34/60
+2026-05-30 12:16:08,138 - INFO - Found 12 products on page 34
+2026-05-30 12:16:11,562 - INFO - Processing page 35/60
+2026-05-30 12:16:11,754 - INFO - Found 12 products on page 35
+2026-05-30 12:16:16,438 - INFO - Processing page 36/60
+2026-05-30 12:16:16,744 - INFO - Found 12 products on page 36
+2026-05-30 12:16:20,436 - INFO - Processing page 37/60
+2026-05-30 12:16:20,626 - INFO - Found 12 products on page 37
+2026-05-30 12:16:24,903 - INFO - Processing page 38/60
+2026-05-30 12:16:25,087 - INFO - Found 12 products on page 38
+2026-05-30 12:16:28,562 - INFO - Processing page 39/60
+2026-05-30 12:16:28,722 - INFO - Found 12 products on page 39
+2026-05-30 12:16:34,058 - INFO - Processing page 40/60
+2026-05-30 12:16:34,223 - INFO - Found 12 products on page 40
+2026-05-30 12:16:38,151 - INFO - Processing page 41/60
+2026-05-30 12:16:38,335 - INFO - Found 12 products on page 41
+2026-05-30 12:16:41,862 - INFO - Processing page 42/60
+2026-05-30 12:16:42,028 - INFO - Found 12 products on page 42
+2026-05-30 12:16:45,697 - INFO - Processing page 43/60
+2026-05-30 12:16:45,866 - INFO - Found 12 products on page 43
+2026-05-30 12:16:49,600 - INFO - Processing page 44/60
+2026-05-30 12:16:49,789 - INFO - Found 12 products on page 44
+2026-05-30 12:16:53,516 - INFO - Processing page 45/60
+2026-05-30 12:16:53,683 - INFO - Found 12 products on page 45
+2026-05-30 12:16:57,267 - INFO - Processing page 46/60
+2026-05-30 12:16:57,471 - INFO - Found 12 products on page 46
+2026-05-30 12:17:01,441 - INFO - Processing page 47/60
+2026-05-30 12:17:01,768 - INFO - Found 12 products on page 47
+2026-05-30 12:17:06,437 - INFO - Processing page 48/60
+2026-05-30 12:17:06,664 - INFO - Found 12 products on page 48
+2026-05-30 12:17:11,916 - INFO - Processing page 49/60
+2026-05-30 12:17:12,096 - INFO - Found 12 products on page 49
+2026-05-30 12:17:15,483 - INFO - Processing page 50/60
+2026-05-30 12:17:15,678 - INFO - Found 12 products on page 50
+2026-05-30 12:17:19,136 - INFO - Processing page 51/60
+2026-05-30 12:17:19,279 - INFO - Found 12 products on page 51
+2026-05-30 12:17:24,223 - INFO - Processing page 52/60
+2026-05-30 12:17:24,376 - INFO - Found 12 products on page 52
+2026-05-30 12:17:30,619 - INFO - Processing page 53/60
+2026-05-30 12:17:30,771 - INFO - Found 12 products on page 53
+2026-05-30 12:17:36,824 - INFO - Processing page 54/60
+2026-05-30 12:17:36,992 - INFO - Found 12 products on page 54
+2026-05-30 12:17:40,801 - INFO - Processing page 55/60
+2026-05-30 12:17:40,973 - INFO - Found 12 products on page 55
+2026-05-30 12:17:44,480 - INFO - Processing page 56/60
+2026-05-30 12:17:44,624 - INFO - Found 12 products on page 56
+2026-05-30 12:17:47,749 - INFO - Processing page 57/60
+2026-05-30 12:17:47,903 - INFO - Found 12 products on page 57
+2026-05-30 12:17:51,125 - INFO - Processing page 58/60
+2026-05-30 12:17:51,280 - INFO - Found 12 products on page 58
+2026-05-30 12:17:54,537 - INFO - Processing page 59/60
+2026-05-30 12:17:54,682 - INFO - Found 12 products on page 59
+2026-05-30 12:17:58,152 - INFO - Processing page 60/60
+2026-05-30 12:17:58,322 - INFO - Found 12 products on page 60
+2026-05-30 12:18:01,034 - INFO - ✅ All lists validated — 720 records
+2026-05-30 12:18:01,059 - INFO - ✅ Extraction complete — 720 products extracted
+2026-05-30 12:18:01,080 - INFO - ✅ Raw data saved to data\aliexpress_laptops.csv
+2026-05-30 12:18:01,080 - INFO - ⏱️ Step completed in 5m 0s
+
+2026-05-30 12:24:43,928 - INFO - 
+==================================================
+2026-05-30 12:24:43,928 - INFO - 🔷 Starting Transformation Process
+2026-05-30 12:24:43,928 - INFO - ===============================
+
+2026-05-30 12:24:43,940 - INFO - ✅ Loaded raw data from data\aliexpress_laptops.csv
+2026-05-30 12:24:43,941 - INFO - 
+==================================================
+2026-05-30 12:24:43,941 - INFO - 🔷 Transforming Data
+2026-05-30 12:24:43,941 - INFO - ===============================
+
+2026-05-30 12:24:43,941 - INFO - Input — 720 rows, 9 columns
+2026-05-30 12:24:43,955 - INFO - ✅ Dropped 139 duplicates — 581 remaining
+2026-05-30 12:24:43,959 - INFO - ✅ Price columns converted to numeric
+2026-05-30 12:24:43,964 - INFO - ✅ Missing product prices filled with median: £40252.07
+2026-05-30 12:24:43,965 - INFO - ✅ Total sold count cleaned to integer
+2026-05-30 12:24:43,974 - INFO - ✅ Discount amount calculated
+2026-05-30 12:24:43,977 - INFO - ✅ Discount percentage calculated
+2026-05-30 12:24:43,983 - INFO - ✅ Boolean flags created
+2026-05-30 12:24:43,990 - INFO - ✅ Price band assigned
+2026-05-30 12:24:43,999 - INFO - ✅ Data quality checks passed
+2026-05-30 12:24:44,000 - INFO - ✅ Transform complete — 581 rows, 9 columns
+2026-05-30 12:24:44,045 - INFO - 
+                                        product_name  product_price   was_price  ...  is_free_shipping  is_top_seller  price_band
+0  New Ultra Slim Laptop 14.1" 16GB RAM 2TB SSD I...      261092.32   326366.52  ...             False           True      Luxury
+1  NAIWO 2026 14.1"Ultra Slim Laptop Windows11 16...      333776.37   417220.46  ...             False           True      Luxury
+2  2025 14 inch Affordable Student Laptop Budget-...      207249.41   249698.08  ...             False          False      Luxury
+3  NEW N3700 14.1" Ultra Slim Windows 11 Pro Lapt...       12577.26    62886.31  ...             False          False      Luxury
+4  Lenovo Gaming Laptop LEGION Y9000P 2025 Suprem...     7003162.79  8753953.49  ...             False          False      Luxury
+
+[5 rows x 9 columns]
+2026-05-30 12:24:44,062 - INFO - ✅ Transformed data saved to data\transformed_laptops.csv
+2026-05-30 12:24:44,063 - INFO - ⏱️ Step completed in 0s
+
+2026-05-30 12:26:26,400 - INFO - 
+==================================================
+2026-05-30 12:26:26,401 - INFO - 🔷 Starting Load Process
+2026-05-30 12:26:26,401 - INFO - ===============================
+
+2026-05-30 12:26:26,408 - INFO - ✅ Loaded transformed data from data\transformed_laptops.csv
+2026-05-30 12:26:26,680 - INFO - ✅ Database engine created
+2026-05-30 12:26:26,680 - INFO - 
+==================================================
+2026-05-30 12:26:26,680 - INFO - 🔷 Loading Data to Database
+2026-05-30 12:26:26,680 - INFO - ===============================
+
+2026-05-30 12:26:26,829 - INFO - ✅ Skipping 0 already existing rows
+2026-05-30 12:26:26,965 - INFO - ✅ 581 new rows loaded into laptops table
+2026-05-30 12:26:26,966 - INFO - ✅ Load complete
+2026-05-30 12:26:26,966 - INFO - ⏱️ Step completed in 0s
+
+2026-05-30 12:27:05,284 - INFO - 
+==================================================
+2026-05-30 12:27:05,284 - INFO - 🔷 FULL PIPELINE START
+2026-05-30 12:27:05,285 - INFO - ===============================
+
+2026-05-30 12:27:05,285 - INFO - 🚀 wipe → extract → transform → load
+
+2026-05-30 12:27:05,285 - INFO - 
+==================================================
+2026-05-30 12:27:05,285 - INFO - 🔷 WIPING OLD DATA
+2026-05-30 12:27:05,286 - INFO - ===============================
+
+2026-05-30 12:27:05,286 - INFO - 
+==================================================
+2026-05-30 12:27:05,286 - INFO - 🔷 Wiping — mode: all
+2026-05-30 12:27:05,286 - INFO - ===============================
+
+2026-05-30 12:27:05,287 - INFO - 🗑️ Deleted file: data\aliexpress_laptops.csv
+2026-05-30 12:27:05,298 - INFO - 🗑️ Deleted file: data\transformed_laptops.csv
+2026-05-30 12:27:05,299 - INFO - [92m🎉 Wipe completed for mode: all[0m
+2026-05-30 12:27:05,300 - INFO - ⏱️ Step completed in 0s
+
+2026-05-30 12:27:05,301 - INFO - 
+==================================================
+2026-05-30 12:27:05,302 - INFO - 🔷 HEALTH CHECK
+2026-05-30 12:27:05,302 - INFO - ===============================
+
+2026-05-30 12:27:05,303 - INFO - 
+==================================================
+2026-05-30 12:27:05,303 - INFO - 🔷 HTTP Response Check
+2026-05-30 12:27:05,303 - INFO - ===============================
+
+2026-05-30 12:27:07,191 - INFO - Successfully accessed https://www.aliexpress.com/w/wholesale-laptop.html?spm=a2g0o.productlist.search.0 | status=200
+2026-05-30 12:27:07,193 - INFO - ⏱️ Step completed in 1s
+
+2026-05-30 12:27:07,193 - INFO - 
+==================================================
+2026-05-30 12:27:07,193 - INFO - 🔷 EXTRACT
+2026-05-30 12:27:07,193 - INFO - ===============================
+
+2026-05-30 12:27:07,194 - INFO - 
+==================================================
+2026-05-30 12:27:07,194 - INFO - 🔷 Output Directory Check
+2026-05-30 12:27:07,194 - INFO - ===============================
+
+2026-05-30 12:27:07,195 - INFO - Output directory ready: data
+2026-05-30 12:27:07,195 - INFO - 
+==================================================
+2026-05-30 12:27:07,195 - INFO - 🔷 Starting Extraction Process
+2026-05-30 12:27:07,195 - INFO - ===============================
+
+2026-05-30 12:27:07,195 - INFO - 
+==================================================
+2026-05-30 12:27:07,196 - INFO - 🔷 Selenium Browser Check
+2026-05-30 12:27:07,196 - INFO - ===============================
+
+2026-05-30 12:27:07,982 - INFO - Opening page: https://www.aliexpress.com/w/wholesale-laptop.html?page=1
+2026-05-30 12:27:17,753 - INFO - Page title: Captcha Interception
+2026-05-30 12:27:25,803 - INFO - ℹ️ No cookie button found or already accepted: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6aef27de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff6aef27e50+14900]
+	chromedriver!(No symbol) [0x7ff6aec8d5ad]
+	chromedriver!(No symbol) [0x7ff6aece7822]
+	chromedriver!(No symbol) [0x7ff6aece7b2c]
+	chromedriver!(No symbol) [0x7ff6aed37d17]
+	chromedriver!(No symbol) [0x7ff6aed3486f]
+	chromedriver!(No symbol) [0x7ff6aecd9df8]
+	chromedriver!(No symbol) [0x7ff6aecdace3]
+	chromedriver!GetHandleVerifier [0x7ff6af23cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff6af237375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff6af25bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff6aef46045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff6aef4ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff6aef31bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff6aef31d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff6aef160e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ff9001ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff900b67c1c+2c]
+
+2026-05-30 12:27:43,133 - INFO - Detected 17 product-like elements
+2026-05-30 12:27:43,134 - INFO - Selenium page load looks successful
+2026-05-30 12:27:43,134 - INFO - ⏱️ Step completed in 35s
+
+2026-05-30 12:27:43,150 - INFO - 
+==================================================
+2026-05-30 12:27:43,150 - INFO - 🔷 Extracting Product Data
+2026-05-30 12:27:43,151 - INFO - ===============================
+
+2026-05-30 12:27:43,151 - INFO - Processing page 1/60
+2026-05-30 12:27:43,415 - INFO - Found 12 products on page 1
+2026-05-30 12:27:50,240 - INFO - Processing page 2/60
+2026-05-30 12:27:50,485 - INFO - Found 12 products on page 2
+2026-05-30 12:27:56,592 - INFO - Processing page 3/60
+2026-05-30 12:27:56,789 - INFO - Found 12 products on page 3
+2026-05-30 12:28:02,998 - INFO - Processing page 4/60
+2026-05-30 12:28:03,189 - INFO - Found 12 products on page 4
+2026-05-30 12:28:08,361 - INFO - Processing page 5/60
+2026-05-30 12:28:08,581 - INFO - Found 12 products on page 5
+2026-05-30 12:28:14,775 - INFO - Processing page 6/60
+2026-05-30 12:28:14,940 - INFO - Found 12 products on page 6
+2026-05-30 12:28:18,822 - INFO - Processing page 7/60
+2026-05-30 12:28:19,043 - INFO - Found 12 products on page 7
+2026-05-30 12:28:23,704 - INFO - Processing page 8/60
+2026-05-30 12:28:23,957 - INFO - Found 12 products on page 8
+2026-05-30 12:28:28,198 - INFO - Processing page 9/60
+2026-05-30 12:28:28,410 - INFO - Found 12 products on page 9
+2026-05-30 12:28:32,113 - INFO - Processing page 10/60
+2026-05-30 12:28:32,276 - INFO - Found 12 products on page 10
+2026-05-30 12:28:36,640 - INFO - Processing page 11/60
+2026-05-30 12:28:36,841 - INFO - Found 12 products on page 11
+2026-05-30 12:28:40,545 - INFO - Processing page 12/60
+2026-05-30 12:28:40,739 - INFO - Found 12 products on page 12
+2026-05-30 12:28:45,666 - INFO - Processing page 13/60
+2026-05-30 12:28:45,873 - INFO - Found 12 products on page 13
+2026-05-30 12:28:51,486 - INFO - Processing page 14/60
+2026-05-30 12:28:51,671 - INFO - Found 12 products on page 14
+2026-05-30 12:28:55,371 - INFO - Processing page 15/60
+2026-05-30 12:28:55,654 - INFO - Found 12 products on page 15
+2026-05-30 12:28:59,613 - INFO - Processing page 16/60
+2026-05-30 12:28:59,830 - INFO - Found 12 products on page 16
+2026-05-30 12:29:03,538 - INFO - Processing page 17/60
+2026-05-30 12:29:03,737 - INFO - Found 12 products on page 17
+2026-05-30 12:29:09,512 - INFO - Processing page 18/60
+2026-05-30 12:29:09,687 - INFO - Found 12 products on page 18
+2026-05-30 12:29:15,337 - INFO - Processing page 19/60
+2026-05-30 12:29:15,541 - INFO - Found 12 products on page 19
+2026-05-30 12:29:21,897 - INFO - Processing page 20/60
+2026-05-30 12:29:22,142 - INFO - Found 12 products on page 20
+2026-05-30 12:29:27,607 - INFO - Processing page 21/60
+2026-05-30 12:29:27,826 - INFO - Found 12 products on page 21
+2026-05-30 12:29:32,883 - INFO - Processing page 22/60
+2026-05-30 12:29:33,057 - INFO - Found 12 products on page 22
+2026-05-30 12:29:39,110 - INFO - Processing page 23/60
+2026-05-30 12:29:39,284 - INFO - Found 12 products on page 23
+2026-05-30 12:29:42,981 - INFO - Processing page 24/60
+2026-05-30 12:29:43,162 - INFO - Found 12 products on page 24
+2026-05-30 12:29:46,677 - INFO - Processing page 25/60
+2026-05-30 12:29:46,907 - INFO - Found 12 products on page 25
+2026-05-30 12:29:50,603 - INFO - Processing page 26/60
+2026-05-30 12:29:50,793 - INFO - Found 12 products on page 26
+2026-05-30 12:29:56,693 - INFO - Processing page 27/60
+2026-05-30 12:29:56,862 - INFO - Found 12 products on page 27
+2026-05-30 12:30:02,322 - INFO - Processing page 28/60
+2026-05-30 12:30:02,556 - INFO - Found 12 products on page 28
+2026-05-30 12:30:07,826 - INFO - Processing page 29/60
+2026-05-30 12:30:08,088 - INFO - Found 12 products on page 29
+2026-05-30 12:30:12,606 - INFO - Processing page 30/60
+2026-05-30 12:30:12,841 - INFO - Found 12 products on page 30
+2026-05-30 12:30:18,188 - INFO - Processing page 31/60
+2026-05-30 12:30:18,432 - INFO - Found 12 products on page 31
+2026-05-30 12:30:22,126 - INFO - Processing page 32/60
+2026-05-30 12:30:22,391 - INFO - Found 12 products on page 32
+2026-05-30 12:30:26,047 - INFO - Processing page 33/60
+2026-05-30 12:30:26,397 - INFO - Found 12 products on page 33
+2026-05-30 12:30:30,065 - INFO - Processing page 34/60
+2026-05-30 12:30:30,263 - INFO - Found 12 products on page 34
+2026-05-30 12:30:36,615 - INFO - Processing page 35/60
+2026-05-30 12:30:36,816 - INFO - Found 12 products on page 35
+2026-05-30 12:30:40,410 - INFO - Processing page 36/60
+2026-05-30 12:30:40,591 - INFO - Found 12 products on page 36
+2026-05-30 12:30:45,084 - INFO - Processing page 37/60
+2026-05-30 12:30:45,251 - INFO - Found 12 products on page 37
+2026-05-30 12:30:49,318 - INFO - Processing page 38/60
+2026-05-30 12:30:49,521 - INFO - Found 12 products on page 38
+2026-05-30 12:30:53,360 - INFO - Processing page 39/60
+2026-05-30 12:30:53,548 - INFO - Found 12 products on page 39
+2026-05-30 12:30:58,599 - INFO - Processing page 40/60
+2026-05-30 12:30:58,793 - INFO - Found 12 products on page 40
+2026-05-30 12:31:03,618 - INFO - Processing page 41/60
+2026-05-30 12:31:03,808 - INFO - Found 12 products on page 41
+2026-05-30 12:31:07,708 - INFO - Processing page 42/60
+2026-05-30 12:31:07,906 - INFO - Found 12 products on page 42
+2026-05-30 12:31:11,632 - INFO - Processing page 43/60
+2026-05-30 12:31:11,793 - INFO - Found 12 products on page 43
+2026-05-30 12:31:15,620 - INFO - Processing page 44/60
+2026-05-30 12:31:15,814 - INFO - Found 12 products on page 44
+2026-05-30 12:31:19,285 - INFO - Processing page 45/60
+2026-05-30 12:31:19,473 - INFO - Found 12 products on page 45
+2026-05-30 12:31:23,322 - INFO - Processing page 46/60
+2026-05-30 12:31:23,528 - INFO - Found 12 products on page 46
+2026-05-30 12:31:27,321 - INFO - Processing page 47/60
+2026-05-30 12:31:27,501 - INFO - Found 12 products on page 47
+2026-05-30 12:31:31,194 - INFO - Processing page 48/60
+2026-05-30 12:31:31,403 - INFO - Found 12 products on page 48
+2026-05-30 12:31:35,576 - INFO - Processing page 49/60
+2026-05-30 12:31:35,811 - INFO - Found 12 products on page 49
+2026-05-30 12:31:39,913 - INFO - Processing page 50/60
+2026-05-30 12:31:40,116 - INFO - Found 12 products on page 50
+2026-05-30 12:31:44,320 - INFO - Processing page 51/60
+2026-05-30 12:31:44,515 - INFO - Found 12 products on page 51
+2026-05-30 12:31:51,161 - INFO - Processing page 52/60
+2026-05-30 12:31:51,421 - INFO - Found 12 products on page 52
+2026-05-30 12:31:55,402 - INFO - Processing page 53/60
+2026-05-30 12:31:55,689 - INFO - Found 12 products on page 53
+2026-05-30 12:32:00,371 - INFO - Processing page 54/60
+2026-05-30 12:32:00,636 - INFO - Found 12 products on page 54
+2026-05-30 12:32:05,424 - INFO - Processing page 55/60
+2026-05-30 12:32:05,649 - INFO - Found 12 products on page 55
+2026-05-30 12:32:10,083 - INFO - Processing page 56/60
+2026-05-30 12:32:10,350 - INFO - Found 12 products on page 56
+2026-05-30 12:32:14,390 - INFO - Processing page 57/60
+2026-05-30 12:32:14,817 - INFO - Found 12 products on page 57
+2026-05-30 12:32:19,208 - INFO - Processing page 58/60
+2026-05-30 12:32:19,480 - INFO - Found 12 products on page 58
+2026-05-30 12:32:23,800 - INFO - Processing page 59/60
+2026-05-30 12:32:24,262 - INFO - Found 12 products on page 59
+2026-05-30 12:32:28,404 - INFO - Processing page 60/60
+2026-05-30 12:32:28,589 - INFO - Found 12 products on page 60
+2026-05-30 12:32:31,467 - INFO - ✅ All lists validated — 720 records
+2026-05-30 12:32:31,472 - INFO - ✅ Extraction complete — 720 products extracted
+2026-05-30 12:32:31,484 - INFO - ✅ Raw data saved to data\aliexpress_laptops.csv
+2026-05-30 12:32:31,484 - INFO - ⏱️ Step completed in 5m 24s
+
+2026-05-30 12:32:31,484 - INFO - 
+==================================================
+2026-05-30 12:32:31,484 - INFO - 🔷 TRANSFORM
+2026-05-30 12:32:31,485 - INFO - ===============================
+
+2026-05-30 12:32:31,485 - INFO - 
+==================================================
+2026-05-30 12:32:31,485 - INFO - 🔷 Starting Transformation Process
+2026-05-30 12:32:31,485 - INFO - ===============================
+
+2026-05-30 12:32:31,486 - INFO - 
+==================================================
+2026-05-30 12:32:31,486 - INFO - 🔷 Transforming Data
+2026-05-30 12:32:31,486 - INFO - ===============================
+
+2026-05-30 12:32:31,486 - INFO - Input — 720 rows, 9 columns
+2026-05-30 12:32:31,490 - INFO - ✅ Dropped 1 duplicates — 719 remaining
+2026-05-30 12:32:31,493 - INFO - ✅ Price columns converted to numeric
+2026-05-30 12:32:31,494 - INFO - ✅ Missing product prices filled with median: £9367.46
+2026-05-30 12:32:31,495 - INFO - ✅ Total sold count cleaned to integer
+2026-05-30 12:32:31,498 - INFO - ✅ Discount amount calculated
+2026-05-30 12:32:31,499 - INFO - ✅ Discount percentage calculated
+2026-05-30 12:32:31,502 - INFO - ✅ Boolean flags created
+2026-05-30 12:32:31,504 - INFO - ✅ Price band assigned
+2026-05-30 12:32:31,508 - INFO - ✅ Data quality checks passed
+2026-05-30 12:32:31,509 - INFO - ✅ Transform complete — 719 rows, 9 columns
+2026-05-30 12:32:31,529 - INFO - 
+                                        product_name  product_price  ...  is_top_seller  price_band
+0  NAIWO 2026 14.1"Ultra Slim Laptop Windows11 16...      333776.37  ...           True      Luxury
+1  2025 14 inch Affordable Student Laptop Budget-...      207249.41  ...          False      Luxury
+2  Lenovo Gaming Laptop LEGION Y9000P 2025 Suprem...     7003162.79  ...          False      Luxury
+3  NEW N3700 14.1" Ultra Slim Windows 11 Pro Lapt...       12577.26  ...          False      Luxury
+4  LENO 2026 NEW 14.1" Laptop Intel Core i9-9900 ...      401219.14  ...           True      Luxury
+
+[5 rows x 9 columns]
+2026-05-30 12:32:31,540 - INFO - ✅ Transformed data saved to data\transformed_laptops.csv
+2026-05-30 12:32:31,541 - INFO - ⏱️ Step completed in 0s
+
+2026-05-30 12:32:31,541 - INFO - 
+==================================================
+2026-05-30 12:32:31,541 - INFO - 🔷 LOAD
+2026-05-30 12:32:31,542 - INFO - ===============================
+
+2026-05-30 12:32:31,542 - INFO - 
+==================================================
+2026-05-30 12:32:31,542 - INFO - 🔷 Starting Load Process
+2026-05-30 12:32:31,543 - INFO - ===============================
+
+2026-05-30 12:32:31,647 - INFO - ✅ Database engine created
+2026-05-30 12:32:31,648 - INFO - 
+==================================================
+2026-05-30 12:32:31,648 - INFO - 🔷 Loading Data to Database
+2026-05-30 12:32:31,648 - INFO - ===============================
+
+2026-05-30 12:32:31,781 - INFO - ✅ Skipping 74 already existing rows
+2026-05-30 12:32:31,981 - INFO - ✅ 645 new rows loaded into laptops table
+2026-05-30 12:32:31,982 - INFO - ✅ Load complete
+2026-05-30 12:32:31,982 - INFO - ⏱️ Step completed in 0s
+
+2026-05-30 12:32:31,983 - INFO - [92m🎉 PIPELINE COMPLETED SUCCESSFULLY![0m
+
+2026-05-30 12:32:31,983 - INFO - ⏱️ Step completed in 5m 26s
+
