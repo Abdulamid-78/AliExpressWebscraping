@@ -137,3 +137,4 @@ def main(df: pd.DataFrame = None) -> pd.DataFrame | None:
 
 if __name__ == "__main__":
     main()
+    logging.info("===============END OF TRANSFORMATION===============")
